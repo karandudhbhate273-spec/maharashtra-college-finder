@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>MhCollegeFinder - Maharashtra College Predictor & Official Cutoffs 2026</title>
+  <meta name="title" content="MhCollegeFinder - Maharashtra College Predictor & Official Cutoffs 2026">
+  <meta name="description" content="MhCollegeFinder helps 12th pass Maharashtra students find engineering colleges by 12th board % and MHT-CET percentile cutoffs for OPEN, OBC, EWS, SEBC, SC, ST, TFWS categories across Pune, Mumbai, Nashik, Nagpur & Sambhajinagar.">
+  <meta name="keywords" content="mhcollegefinder, mh college finder, maharashtra college finder, mht cet college predictor 2026, sebc cutoff maharashtra, female quota engineering cutoff, 12th pass college finder maharashtra">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mhcollegefinder.vercel.app/">
+
+  <!-- Google Official Search Favicon & Logo Standards -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Facebook / WhatsApp Social Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mhcollegefinder.vercel.app/">
+  <meta property="og:site_name" content="MhCollegeFinder">
+  <meta property="og:title" content="MhCollegeFinder - Maharashtra College Predictor & Cutoffs">
+  <meta property="og:description" content="Predict your eligible engineering colleges in Maharashtra based on 12th % and MHT-CET percentile for OPEN, OBC, EWS, SEBC, SC, ST & TFWS quotas.">
+  <meta property="og:image" content="https://mhcollegefinder.vercel.app/favicon-192x192.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mhcollegefinder.vercel.app/">
+  <meta name="twitter:title" content="MhCollegeFinder - Maharashtra College Predictor">
+  <meta name="twitter:description" content="Find eligible colleges in Pune, Mumbai, Nashik & Nagpur by MHT-CET score & 12th percentage.">
+  <meta name="twitter:image" content="https://mhcollegefinder.vercel.app/favicon-192x192.png">
+
+  <!-- Google Official Search Favicon & WebSite Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MhCollegeFinder",
+    "alternateName": ["MH College Finder", "Maharashtra College Finder"],
+    "url": "https://mhcollegefinder.vercel.app/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MhCollegeFinder",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mhcollegefinder.vercel.app/favicon-192x192.png",
+        "width": 192,
+        "height": 192
+      }
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="https://mhcollegefinder.vercel.app/" class="logo" id="app-logo">
+        <div class="logo-icon" style="background: transparent; padding: 0;">
+          <img src="/favicon-96x96.png" alt="MhCollegeFinder Logo" width="42" height="42" style="border-radius: 10px; object-fit: cover;">
+        </div>
+        <div class="logo-text">Mh<span>CollegeFinder</span></div>
+      </a>
+      <div class="nav-badges">
+        <span class="badge-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">✅ DTE Official CAP Round Verified</span>
+        <span class="badge-tag">📊 MHT-CET & 12th Cutoffs</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">Discover Your Dream College on <highlight>MhCollegeFinder</highlight></h1>
+    <p class="hero-subtitle">Enter your 12th board marks, MHT-CET percentile, category, gender quota, and preferred region to find eligible engineering colleges across Maharashtra.</p>
+  </section>
+
+  <!-- Main App Layout -->
+  <main class="app-layout">
+    
+    <!-- Sidebar / Student Predictor Input Form -->
+    <aside class="form-sidebar">
+      <div class="glass-panel form-card">
+        <div class="form-header">
+          <div class="form-header-icon">🎯</div>
+          <div>
+            <h3>Predictor Profile</h3>
+            <p style="font-size: 0.78rem; color: var(--text-muted);">Enter student percentage & details</p>
+          </div>
+        </div>
+
+        <form id="predictor-form">
+          <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" class="form-control" placeholder="Enter student full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-phone">Contact Number</label>
+            <input type="tel" id="student-phone" class="form-control" placeholder="e.g. 9876543210" pattern="[0-9+\s-]{10,15}" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="board-percentage">12th Board %</label>
+              <input type="number" id="board-percentage" class="form-control" placeholder="e.g. 85.5" step="0.01" min="35" max="100" required>
+            </div>
+            <div class="form-group">
+              <label for="cet-percentile">MHT-CET %ile</label>
+              <input type="number" id="cet-percentile" class="form-control" placeholder="e.g. 92.40" step="0.01" min="0" max="100" required>
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="caste-category">Caste Category</label>
+              <select id="caste-category" class="form-control" required>
+                <option value="OPEN">Open / General</option>
+                <option value="OBC">OBC (Other Backward Classes)</option>
+                <option value="EWS">EWS (Economically Weaker Section)</option>
+                <option value="SEBC">SEBC (Socially &amp; Educationally Backward Class)</option>
+                <option value="SC">SC (Scheduled Caste)</option>
+                <option value="ST">ST (Scheduled Tribe)</option>
+                <option value="VJNT">VJ / NT (Vimukta Jati / Nomadic Tribes)</option>
+                <option value="TFWS">TFWS (Tuition Fee Waiver Scheme)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-gender">Gender Quota</label>
+              <select id="student-gender" class="form-control" required>
+                <option value="Male">Male / General (G-Quota)</option>
+                <option value="Female">Female (L-Quota 30%)</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="target-region">Preferred Region / Division</label>
+            <select id="target-region" class="form-control">
+              <option value="All">All Maharashtra (1,100+ Colleges)</option>
+              <!-- Populated via JS -->
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-predict">
+            <span>✨ Find Colleges & Cutoffs</span>
+          </button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Search, Filters & College List -->
+    <section class="results-area">
+
+      <!-- Division & District Filter Panel -->
+      <div class="glass-panel search-filter-box">
+        <div class="form-group" style="margin: 0;">
+          <label for="division-filter">Division Filter</label>
+          <select id="division-filter" class="form-control">
+            <option value="All">All Divisions</option>
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+        <div class="form-group" style="margin: 0;">
+          <label for="district-filter">District Filter</label>
+          <select id="district-filter" class="form-control">
+            <option value="All">All Districts</option>
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+        <div class="form-group" style="margin: 0;">
+          <label for="search-input">Search College Name / DTE Code</label>
+          <input type="text" id="search-input" class="form-control" placeholder="Search COEP, PICT, Keystone, 6770...">
+        </div>
+      </div>
+
+      <!-- Results Header & Counter -->
+      <div class="results-header">
+        <div class="results-title-group">
+          <h2 id="results-heading">Recommended Colleges</h2>
+          <p class="results-count" id="results-count">Showing matching colleges</p>
+        </div>
+        <div class="filter-actions">
+          <button id="btn-reset-filters" class="btn-secondary">↺ Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- College List Container -->
+      <div class="college-list" id="college-list">
+        <!-- Rendered via JS -->
+      </div>
+
+    </section>
+  </main>
+
+  <!-- College Detail Modal View -->
+  <div class="modal-overlay" id="college-modal">
+    <div class="modal-container" id="modal-content">
+      <button class="modal-close" id="btn-modal-close">&times;</button>
+      <div id="modal-body">
+        <!-- Dynamically rendered college detail -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <strong>MhCollegeFinder</strong> — Official DTE CAP Round Cutoffs Data for 12th & MHT-CET Students</p>
+  </footer>
+
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
